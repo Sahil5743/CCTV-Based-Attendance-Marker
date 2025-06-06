@@ -1,22 +1,23 @@
-# CCTV Attendance Management System
+# 📷 CCTV Attendance Management System
 
-A full-stack attendance management system with face recognition, CCTV integration, salary calculation, and automated email reports.
+A full-stack, AI-powered attendance management platform featuring face recognition, CCTV integration, automated salary processing, and real-time email reporting.
+
+---
+
+## 🚀 Features
+
+- 🔐 **Secure User Authentication** (Admin/HR roles)
+- 🧠 **AI-Based Face Recognition** (demo included, ready for real-time upgrade)
+- 📹 **CCTV Integration** via RTSP and WebRTC
+- 🕒 **Attendance Tracking** with timestamps and status
+- 💰 **Automated Salary Calculation**
+- 📧 **Daily Email Reports**
+- 🖥️ **Modern Frontend with Next.js**
+- 🔧 **RESTful API with Express & MongoDB**
+- 🐳 **Fully Dockerized** for seamless local and production deployment
 
 ---
 
-## Features
-
-- **User Authentication** (HR/Admin)
-- **Face Recognition** (AI-based, mock/demo included)
-- **CCTV Camera Integration** (RTSP/WebRTC bridge)
-- **Attendance Tracking**
-- **Salary Calculation**
-- **Automated Email Reports**
-- **Modern Next.js Frontend**
-- **REST API Backend (Express/MongoDB)**
-- **Dockerized for easy deployment**
-
----
 
 ## Project Structure
 
