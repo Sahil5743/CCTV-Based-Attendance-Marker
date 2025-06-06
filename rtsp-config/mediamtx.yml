@@ -1,0 +1,82 @@
+# MediaMTX configuration for RTSP to WebRTC bridge
+logLevel: info
+logDestinations: [stdout]
+logFile: mediamtx.log
+
+# API configuration
+api: yes
+apiAddress: :8890
+
+# Metrics
+metrics: yes
+metricsAddress: :9998
+
+# RTSP server
+rtspAddress: :8554
+protocols: [tcp]
+encryption: "no"
+
+# WebRTC server
+webrtcAddress: :8889
+webrtcLocalUDPAddress: :8189
+webrtcIPsFromInterfaces: yes
+
+# HLS server (for fallback)
+hlsAddress: :8888
+hlsEncryption: no
+
+# Path defaults
+pathDefaults:
+  # Source settings
+  source: publisher
+  sourceProtocol: automatic
+  sourceAnyPortEnable: no
+  
+  # Publisher settings
+  publishUser: ""
+  publishPass: ""
+  publishIPs: []
+  
+  # Reader settings
+  readUser: ""
+  readPass: ""
+  readIPs: []
+  
+  # WebRTC settings
+  webrtcLocalUDPAddress: :8189
+  webrtcIPsFromInterfaces: yes
+  
+  # Recording
+  record: no
+
+# Camera paths
+paths:
+  # Main entrance camera
+  camera1:
+    source: rtsp://admin:password@192.168.1.101:554/stream1
+    sourceProtocol: rtsp
+    transport: tcp
+    
+  # Reception area camera  
+  camera2:
+    source: rtsp://admin:password@192.168.1.102:554/stream1
+    sourceProtocol: rtsp
+    transport: tcp
+    
+  # Cafeteria camera
+  camera3:
+    source: rtsp://admin:password@192.168.1.103:554/stream1
+    sourceProtocol: rtsp
+    transport: tcp
+    
+  # Conference room camera
+  camera5:
+    source: rtsp://admin:password@192.168.1.105:554/stream1
+    sourceProtocol: rtsp
+    transport: tcp
+    
+  # Test stream (for development)
+  test:
+    source: rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4
+    sourceProtocol: rtsp
+    transport: tcp
